@@ -1,0 +1,32 @@
+.header {
+  & h1 {
+    font-weight: 400;
+    padding: 1rem 2rem;
+  }
+
+  &__underline {
+    display: flex;
+
+    & .one {
+      height: 0.2rem;
+      background-color: blue;
+      margin-left: 2rem;
+    }
+
+    & .two {
+      height: 0.2rem;
+      width: 2rem;
+      background-color: blue;
+      opacity: 0.8;
+      margin-left: 0.4rem;
+    }
+
+    & .three {
+      height: 0.2rem;
+      width: 1rem;
+      background-color: blue;
+      opacity: 0.4;
+      margin-left: 0.4rem;
+    }
+  }
+}

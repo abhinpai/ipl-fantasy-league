@@ -9,7 +9,10 @@
 @import './page/auth';
 @import './page/home';
 
+// Atom style
+@import './component/header';
+
 // Component Style
 @import './component/schedule';
-@import './component/scoreboard';
+@import './component/leaderboard';
 @import './component/question';

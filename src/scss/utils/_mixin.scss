@@ -29,14 +29,14 @@
   position: absolute;
   width: 30rem;
   height: 100%;
+  z-index: 100;
   @include transition-left();
 
   & .match-schedule-btn {
     cursor: pointer;
     float: right;
-    & span {
-      user-select: none;
-      color: white;
+    & img {
+      height: 10rem;
     }
   }
 }
@@ -72,4 +72,9 @@
 @mixin naked-anchor {
   text-decoration: none;
   color: inherit;
+}
+
+@mixin main-div-background {
+  background: #00000069;
+  border-radius: 10px;
 }
