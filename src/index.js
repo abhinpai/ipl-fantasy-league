@@ -6,25 +6,29 @@ import './scss/main.scss';
 import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
 import SingUp from './pages/SingUp';
 import PrivateRoute from './pages/PrivateRoute';
+import { DataLayerContext } from './state/dataLayer';
+import reducer, { initialData } from './state/reducer';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
-      <Switch>
-        <Route path='/signin'>
-          <SignIn />
-        </Route>
-        <Route path='/signup'>
-          <SingUp />
-        </Route>
-        <Route path='/home'>
-          <PrivateRoute />
-        </Route>
-        <Route path='/'>
-          <PrivateRoute  authorized={false}/>
-        </Route>
-      </Switch>
-    </Router>
+    <DataLayerContext reducer={reducer} initialState={initialData}>
+      <Router>
+        <Switch>
+          <Route path='/signin'>
+            <SignIn />
+          </Route>
+          <Route path='/signup'>
+            <SingUp />
+          </Route>
+          <Route path='/home'>
+            <PrivateRoute />
+          </Route>
+          <Route path='/'>
+            <PrivateRoute authorized={false} />
+          </Route>
+        </Switch>
+      </Router>
+    </DataLayerContext>
   </React.StrictMode>,
   document.getElementById('root')
 );

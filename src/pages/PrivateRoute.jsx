@@ -1,13 +1,14 @@
 import React from 'react';
 import { Redirect, Route } from 'react-router';
+import useAppData from '../state/dataLayer';
 import Home from './Home';
 
 function PrivateRoute({ authorized }) {
-  console.log('Reched to private route');
+  const [{ isLoggedIn }] = useAppData();
   return (
     <Route
       render={({ location }) =>
-        authorized ? (
+        isLoggedIn ? (
           <Home />
         ) : (
           <Redirect

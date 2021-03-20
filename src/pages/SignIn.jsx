@@ -2,8 +2,12 @@ import React from 'react';
 import PlayersImage from '../assets/players.svg';
 import ArrowIcon from '../assets/icons/arrow-right.svg';
 import { Link } from 'react-router-dom';
+import useAppData from '../state/dataLayer';
+import { actionUserLogin } from '../state/action';
 
 function SignIn() {
+  const [, dispatch] = useAppData();
+
   return (
     <section className='auth-section'>
       <div className='auth-section__left-col'>
@@ -12,7 +16,11 @@ function SignIn() {
         <input required type='email' placeholder='Email Id' /> <br />
         <div className='auth-actions'>
           <input required type='password' placeholder='Password' />
-          <Link to="/" className='primary-btn auth-action__btn'>
+          <Link
+            to='/'
+            className='primary-btn auth-action__btn'
+            onClick={() => actionUserLogin(true, dispatch)}
+          >
             <img src={ArrowIcon} alt='Auth Button' />
           </Link>
         </div>
