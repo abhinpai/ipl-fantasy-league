@@ -1,0 +1,20 @@
+.match-schedule--inactive {
+  @include schedule-section();
+  display: none;
+  z-index: 0;
+}
+
+.match-schedule-drawer--inactive {
+  @include schedule-drawer();
+  left: -28rem;
+}
+
+.match-schedule--active {
+  @include schedule-section();
+  display:block;
+}
+
+ .match-schedule-drawer--active {
+  @include schedule-drawer();
+  left: 0rem;
+}

@@ -1,4 +1,3 @@
-
 // Utils Style
 @import './utils/mixin';
 
@@ -7,4 +6,9 @@
 
 // Page Style
 @import './page/auth';
+@import './page/home';
 
+// Component Style
+@import './component/schedule';
+@import './component/scoreboard';
+@import './component/question';

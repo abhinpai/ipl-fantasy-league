@@ -1,13 +1,23 @@
 import React from 'react';
-import { actionUserLogin } from '../state/action';
+import Question from '../components/compounds/Question';
+import Schedule from '../components/compounds/Schedule';
+import ScroreBoard from '../components/compounds/ScroreBoard';
+import { actionShowSchedule, actionUserLogin } from '../state/action';
 import useAppData from '../state/dataLayer';
 
 function Home() {
-  const [_, dispatch] = useAppData();
+  const [{ isScheduleDivOpen }, dispatch] = useAppData();
   return (
-    <div>
-      <button onClick={() => actionUserLogin(false, dispatch)}>Logout</button>
-    </div>
+    <main className='main-page'>
+     <Schedule/>
+     <Question/>
+     <ScroreBoard/>
+      {/* <div className='match-event-question'>*</div>
+      <div className='score-board'>*</div>
+      <button onClick={() => actionShowSchedule(!isScheduleDivOpen, dispatch)}>
+        {isScheduleDivOpen ? 'Hide' : 'Show'}
+      </button> */}
+    </main>
   );
 }
 

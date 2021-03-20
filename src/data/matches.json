@@ -1,0 +1,38 @@
+[
+  {
+    "id": "match1",
+    "team1": "RCB",
+    "team2": "MI",
+    "date": "9 April 2021",
+    "day": "Friday",
+    "winner": "RCB",
+    "looser": "MI"
+  },
+  {
+    "id": "match1",
+    "team1": "RCB",
+    "team2": "MI",
+    "date": "9 April 2021",
+    "day": "Friday",
+    "winner": "MI",
+    "looser": "MI"
+  },
+  {
+    "id": "match1",
+    "team1": "RCB",
+    "team2": "MI",
+    "date": "9 April 2021",
+    "day": "Friday",
+    "winner": null,
+    "looser": null
+  },
+  {
+    "id": "match1",
+    "team1": "RCB",
+    "team2": "MI",
+    "date": "9 April 2021",
+    "day": "Friday",
+    "winner": null,
+    "looser": null
+  }
+]

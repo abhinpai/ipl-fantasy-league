@@ -24,6 +24,41 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#121212",endColorstr="#921cf8",GradientType=1);
 }
 
+@mixin schedule-drawer {
+  @include primary-gradient-background();
+  position: absolute;
+  width: 30rem;
+  height: 100%;
+  @include transition-left();
+  
+  & span {
+    user-select: none;
+    cursor: pointer;
+    color: white;
+    margin-right: -2.4rem;
+    margin-top: 4rem;
+    float: right;
+    transform: rotate(90deg);
+  }
+}
+
+@mixin schedule-section {
+  width: 100%;
+  position: absolute;
+  background-color: #0000009e;
+  height: 100%;
+  right: 0;
+  @include transition-opacity();
+}
+
+@mixin transition-left {
+  transition: left 600ms ease-in-out;
+}
+
+@mixin transition-opacity {
+  transition: display 600ms ease-in;
+}
+
 @mixin naked-anchor {
   text-decoration: none;
   color: inherit;

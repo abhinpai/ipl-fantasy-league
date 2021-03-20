@@ -1,0 +1,13 @@
+.main-page {
+  display: flex;
+  height: 100%;
+  justify-content: flex-end;
+
+  & .match-event-question {
+    background-color: palegoldenrod;
+  }
+
+  & .score-board {
+    background-color: palevioletred;
+  }
+}
