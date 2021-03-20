@@ -30,7 +30,7 @@
   width: 30rem;
   height: 100%;
   @include transition-left();
-  
+
   & span {
     user-select: none;
     cursor: pointer;
@@ -40,6 +40,17 @@
     float: right;
     transform: rotate(90deg);
   }
+}
+
+@mixin center-div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
 }
 
 @mixin schedule-section {
