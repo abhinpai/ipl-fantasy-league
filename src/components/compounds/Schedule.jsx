@@ -1,12 +1,19 @@
 import React from 'react';
 import { actionShowSchedule } from '../../state/action';
 import useAppData from '../../state/dataLayer';
+import ScheduleButtonImage from '../../assets/scheduleBtn.svg'
 
 function Schedule() {
   const [{ isScheduleDivOpen }, dispatch] = useAppData();
+
+  const closeDiv = () => {
+    actionShowSchedule(false, dispatch);
+  };
+
   return (
     <section>
       <div
+        onClick={closeDiv}
         className={
           isScheduleDivOpen
             ? 'match-schedule--active'
@@ -20,9 +27,14 @@ function Schedule() {
             : 'match-schedule-drawer--inactive'
         }
       >
-        <span onClick={() => actionShowSchedule(!isScheduleDivOpen, dispatch)}>
-          Match Schedule
-        </span>
+        <div className="match-schedule-btn" onClick={() => actionShowSchedule(!isScheduleDivOpen, dispatch)}>
+          <img height={'10rem'} src={ScheduleButtonImage} alt="Schedule Button"/>
+          {/* <span
+            
+          >
+            Match Schedule
+          </span> */}
+        </div>
       </div>
     </section>
   );

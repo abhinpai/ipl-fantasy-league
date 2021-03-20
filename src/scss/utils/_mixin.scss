@@ -31,14 +31,13 @@
   height: 100%;
   @include transition-left();
 
-  & span {
-    user-select: none;
+  & .match-schedule-btn {
     cursor: pointer;
-    color: white;
-    margin-right: -2.4rem;
-    margin-top: 4rem;
     float: right;
-    transform: rotate(90deg);
+    & span {
+      user-select: none;
+      color: white;
+    }
   }
 }
 
