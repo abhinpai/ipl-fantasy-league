@@ -34,7 +34,9 @@
 
   & .match-schedule-btn {
     cursor: pointer;
-    float: right;
+    position: absolute;
+    right: 0;
+    top: 0;
     & img {
       height: 10rem;
     }

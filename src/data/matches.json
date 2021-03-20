@@ -10,17 +10,17 @@
   },
   {
     "id": "match1",
-    "team1": "RCB",
-    "team2": "MI",
-    "date": "9 April 2021",
+    "team1": "CSK",
+    "team2": "SRH",
+    "date": "10 April 2021",
     "day": "Friday",
     "winner": "MI",
     "looser": "MI"
   },
   {
     "id": "match1",
-    "team1": "RCB",
-    "team2": "MI",
+    "team1": "SRH",
+    "team2": "RCB",
     "date": "9 April 2021",
     "day": "Friday",
     "winner": null,
@@ -28,7 +28,7 @@
   },
   {
     "id": "match1",
-    "team1": "RCB",
+    "team1": "CSK",
     "team2": "MI",
     "date": "9 April 2021",
     "day": "Friday",
