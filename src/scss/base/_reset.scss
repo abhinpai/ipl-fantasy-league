@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --primary-font-color: #ffff;
+}
+
+html,
+body,
+#root {
+  height: 100% !important;
+  overflow: hidden;
+}
+
+body {
+  color: var(--primary-font-color);
+  @include primary-gradient-background();
+}

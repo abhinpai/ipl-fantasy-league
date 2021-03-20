@@ -1,0 +1,25 @@
+@mixin primary-gradient-background {
+  background: rgb(18, 18, 18);
+  background: -moz-linear-gradient(
+    36deg,
+    rgba(18, 18, 18, 1) 0%,
+    rgba(6, 25, 96, 1) 32%,
+    rgba(105, 18, 180, 1) 69%,
+    rgba(146, 28, 248, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    36deg,
+    rgba(18, 18, 18, 1) 0%,
+    rgba(6, 25, 96, 1) 32%,
+    rgba(105, 18, 180, 1) 69%,
+    rgba(146, 28, 248, 1) 100%
+  );
+  background: linear-gradient(
+    36deg,
+    rgba(18, 18, 18, 1) 0%,
+    rgba(6, 25, 96, 1) 32%,
+    rgba(105, 18, 180, 1) 69%,
+    rgba(146, 28, 248, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#121212",endColorstr="#921cf8",GradientType=1);
+}
