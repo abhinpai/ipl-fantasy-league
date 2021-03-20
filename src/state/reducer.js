@@ -1,7 +1,7 @@
 import { actions } from './action';
 
 export const initialData = {
-  isLoggedIn: true,
+  isLoggedIn: false,
   isScheduleDivOpen: false,
 };
 
