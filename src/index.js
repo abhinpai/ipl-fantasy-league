@@ -5,6 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import './scss/main.scss';
 import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
 import SingUp from './pages/SingUp';
+import PrivateRoute from './pages/PrivateRoute';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,8 +17,11 @@ ReactDOM.render(
         <Route path='/signup'>
           <SingUp />
         </Route>
+        <Route path='/home'>
+          <PrivateRoute />
+        </Route>
         <Route path='/'>
-          <SignIn />
+          <PrivateRoute  authorized={false}/>
         </Route>
       </Switch>
     </Router>

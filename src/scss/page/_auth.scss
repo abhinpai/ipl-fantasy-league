@@ -1,9 +1,10 @@
-.signin-section {
+.auth-section {
   display: flex;
   height: 100%;
   justify-content: center;
   align-items: center;
   margin: 0 4rem;
+  
   &__left-col {
     width: 100%;
 
@@ -28,11 +29,11 @@
       color: var(--primary-font-color);
     }
 
-    & .signin-actions {
+    & .auth-actions {
       display: flex;
       align-items: center;
 
-      & .signin-action__btn {
+      & .auth-action__btn {
         margin-left: 1rem;
         background: #5616a3;
         height: 2.4rem;
@@ -50,12 +51,13 @@
       font-weight: 300;
       color: #d5d5d5;
       font-size: 12px;
+      user-select: none;
+
       & a {
         margin: 0 4px;
-        color: inherit;
-        text-decoration: none;
         font-weight: bold;
         cursor: pointer;
+        @include naked-anchor();
       }
     }
   }

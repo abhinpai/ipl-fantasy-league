@@ -23,3 +23,8 @@
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#121212",endColorstr="#921cf8",GradientType=1);
 }
+
+@mixin naked-anchor {
+  text-decoration: none;
+  color: inherit;
+}
