@@ -3,10 +3,24 @@ import ReactDOM from 'react-dom';
 import SignIn from './pages/SignIn';
 import reportWebVitals from './reportWebVitals';
 import './scss/main.scss';
+import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
+import SingUp from './pages/SingUp';
 
 ReactDOM.render(
   <React.StrictMode>
-    <SignIn/>
+    <Router>
+      <Switch>
+        <Route path='/signin'>
+          <SignIn />
+        </Route>
+        <Route path='/signup'>
+          <SingUp />
+        </Route>
+        <Route path='/'>
+          <SignIn />
+        </Route>
+      </Switch>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );

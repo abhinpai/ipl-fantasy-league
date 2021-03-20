@@ -1,6 +1,7 @@
 import React from 'react';
 import PlayersImage from '../assets/players.svg';
 import ArrowIcon from '../assets/icons/arrow-right.svg';
+import { Link } from 'react-router-dom';
 
 function SignIn() {
   return (
@@ -16,7 +17,8 @@ function SignIn() {
           </div>
         </div>
         <p>
-          Don't have an account? <span>Signup</span> from here
+          Don't have an account?
+          <Link to='/signup'>Signup</Link>from here
         </p>
       </div>
       <div className='signin-section__right-col'>
