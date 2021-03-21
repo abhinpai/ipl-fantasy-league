@@ -15,16 +15,16 @@ function Home() {
     //   //   error ? console.log(error) : console.log('Data saved successfully');
     //   // });
     // })
-    // database.ref('/matches').set(Matches, (error) => {
+    // dbInstance.ref('/matches').set(Matches, (error) => {
     //   error ? console.log(error) : console.log('Data saved successfully');
     // });
 
-    dbInstance.ref('/matches').on('value', (snapshot) => {
-      console.log(snapshot.val());
-    });
+    // dbInstance.ref('/matches').on('value', (snapshot) => {
+    //   console.log(snapshot.val());
+    // });
   }, []);
 
-  
+
   return (
     <>
       <main className='main-page'>
