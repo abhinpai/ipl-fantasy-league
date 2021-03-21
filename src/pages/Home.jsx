@@ -3,24 +3,28 @@ import Question from '../components/compounds/Question';
 import Schedule from '../components/compounds/Schedule';
 import LeaderBoard from '../components/compounds/LeaderBoard';
 import firebase from 'firebase';
-import { firebaseConfig } from '../utils/getFirebaseConfig';
 import Matches from '../data/matches.json';
-
-firebase.initializeApp(firebaseConfig);
-let database = firebase.database();
+import useFirebase from '../utils/firebaseUtil';
 
 function Home() {
+  const dbInstance = useFirebase();
+
   useEffect(() => {
+    // Matches.map(x =>{
+    //   // database.ref('/matches'+ x.matchId).set(x, (error) => {
+    //   //   error ? console.log(error) : console.log('Data saved successfully');
+    //   // });
+    // })
     // database.ref('/matches').set(Matches, (error) => {
     //   error ? console.log(error) : console.log('Data saved successfully');
     // });
 
-    // database.ref('/matches').on('value', (snapshot) => {
-    //   console.log(snapshot.val());
-    // });
-
-
+    dbInstance.ref('/matches').on('value', (snapshot) => {
+      console.log(snapshot.val());
+    });
   }, []);
+
+  
   return (
     <>
       <main className='main-page'>
