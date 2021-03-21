@@ -21,11 +21,11 @@ function Schedule() {
   };
 
   const getMatchStatus = (match) => {
-    if (!match.winner && !match.isDraw) {
+    if (match.winner === "null" && match.isDraw === "null") {
       return '-';
     } else if (match.team1 === match.winner) {
       return '1 - 0';
-    } else if (match.isDraw) {
+    } else if (match.isDraw && match.isDraw !== "null") {
       return 'Draw';
     } else {
       return '0 - 1';
@@ -52,7 +52,7 @@ function Schedule() {
         }
       >
         <div className='match-schedule'>
-          {matches.length > 0 ? (
+          {matches?.length > 0 ? (
             matches.map((match, index) => {
               return (
                 <div className='match' key={index}>
