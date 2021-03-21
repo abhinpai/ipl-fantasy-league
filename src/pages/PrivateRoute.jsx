@@ -3,7 +3,7 @@ import { Redirect, Route } from 'react-router';
 import useAppData from '../state/dataLayer';
 import Home from './Home';
 
-function PrivateRoute({ authorized }) {
+const PrivateRoute = () => {
   const [{ isLoggedIn }] = useAppData();
   return (
     <Route
@@ -21,6 +21,6 @@ function PrivateRoute({ authorized }) {
       }
     />
   );
-}
+};
 
 export default PrivateRoute;

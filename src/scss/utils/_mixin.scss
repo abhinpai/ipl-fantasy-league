@@ -80,3 +80,8 @@
   background: #00000069;
   border-radius: 10px;
 }
+
+@mixin button-effect {
+  transform: scale(1.1);
+  transition: transform 200ms ease-in-out;
+}

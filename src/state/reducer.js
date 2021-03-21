@@ -1,7 +1,7 @@
 import { actions } from './action';
 
 export const initialData = {
-  isLoggedIn: true,
+  isLoggedIn: false,
   isScheduleDivOpen: false,
   matches: [],
   leaderboard: [],
@@ -13,7 +13,7 @@ const reducer = (state, action) => {
       return { ...state, isLoggedIn: action.payload };
     case actions.showSchedule:
       return { ...state, isScheduleDivOpen: action.payload };
-      case actions.matches:
+    case actions.matches:
       return { ...state, matches: action.payload };
     default:
       return state;
