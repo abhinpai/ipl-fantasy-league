@@ -1,4 +1,5 @@
 import firebase from 'firebase';
+import { generateFirebaseUserId } from './helpers';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyD8IEP25_rnqUHGaZ8cdpGnAi9CguDxmSM',
@@ -17,9 +18,27 @@ firebase.initializeApp(firebaseConfig);
 
 const useFirebase = () => {
   if (!firebaseDB) {
-    return firebase.database();
+    firebaseDB = firebase.database();
   }
+
   return firebaseDB;
 };
 
 export default useFirebase;
+
+
+// -----------------------------
+// Trouble Shooting Methods
+// -----------------------------
+
+const createUser = () => {
+  firebase
+    .database()
+    .ref('/users')
+    .child(generateFirebaseUserId('abhin.pai@honeywell.com'))
+    .set({
+      name: 'Abhin Pai',
+      emailId: 'abhin.pai@honeywell.com',
+      password: 'Qwerty#0000',
+    });
+};
