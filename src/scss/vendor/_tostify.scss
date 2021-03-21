@@ -1,0 +1,30 @@
+.notification {
+  display: flex;
+  align-items: center;
+  & img {
+    margin-right: 0.8rem;
+  }
+  & div {
+    & h3 {
+      font-weight: 500;
+      font-size: 16px;
+    }
+    & p {
+      font-size: 12px;
+      font-weight: 300;
+    }
+  }
+}
+
+.Toastify__toast {
+  border-radius: 4px !important;
+  padding: 1rem 1.4rem !important;
+}
+
+.Toastify__toast-body {
+  font-family: var(--primary-font);
+}
+
+.Toastify__toast--success {
+  background-color: #00875a !important;
+}

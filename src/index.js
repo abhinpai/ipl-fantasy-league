@@ -8,6 +8,7 @@ import SignUp from './pages/SignUp';
 import PrivateRoute from './pages/PrivateRoute';
 import { DataLayerContext } from './state/dataLayer';
 import reducer, { initialData } from './state/reducer';
+import Notification from './components/molecules/Notification';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -28,6 +29,7 @@ ReactDOM.render(
           </Route>
         </Switch>
       </Router>
+      <Notification/>
     </DataLayerContext>
   </React.StrictMode>,
   document.getElementById('root')

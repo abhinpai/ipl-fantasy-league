@@ -5,6 +5,7 @@ import { Link, useHistory } from 'react-router-dom';
 import useFirebase from '../utils/firebaseUtil';
 import { Collections, EmailRegx } from '../utils/constants';
 import { generateFirebaseUserId } from '../utils/helpers';
+import { errorToast, successToast } from '../components/molecules/Notification';
 
 function SignUp() {
   const [user, setUser] = useState({});
@@ -13,11 +14,17 @@ function SignUp() {
 
   const signUpNewUser = () => {
     if (user.cPassword !== user.password) {
-      console.warn('Show password missmatch error message');
+      errorToast({
+        title: 'Password mismatch',
+        message: 'Please verify the password',
+      });
     }
 
     if (!EmailRegx.test(user.emailId)) {
-      console.warn('Show Invalid email id error message');
+      errorToast({
+        title: 'Invalid email id',
+        message: 'TBU',
+      });
     } else {
       dbInstance
         .ref(Collections.users)
@@ -28,9 +35,15 @@ function SignUp() {
 
   const onRegistration = (error) => {
     if (error) {
-      console.warn('failed to sign up');
+      errorToast({
+        title: 'Failed to signup',
+        message: 'Please try again after sometime!',
+      });
     } else {
-      console.log('Successfully signed up');
+      successToast({
+        title: 'Successfully to signup',
+        message: 'TBU',
+      });
       setUser({});
       histroy.push('/signin');
     }
