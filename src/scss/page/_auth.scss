@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   margin: 0 4rem;
-  
+
   &__left-col {
     width: 100%;
 
@@ -44,6 +44,10 @@
         justify-content: center;
         border-radius: 50%;
         cursor: pointer;
+
+        &:hover {
+          @include button-effect();
+        }
       }
     }
 

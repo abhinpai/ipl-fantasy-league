@@ -10,7 +10,7 @@ const getLeaderBoard = () => {
     let score = 0;
     let eventplayed = 0;
     const userSubmissions = LeadeBoardData[user];
-    userSubmissions.map((submission, index) => {
+    userSubmissions.forEach((submission) => {
       let match = MatchData.find((x) => x.matchId === submission.matchId);
       eventplayed++;
       if (match?.winner === submission.winner) {

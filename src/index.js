@@ -4,7 +4,7 @@ import SignIn from './pages/SignIn';
 import reportWebVitals from './reportWebVitals';
 import './scss/main.scss';
 import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
-import SingUp from './pages/SingUp';
+import SignUp from './pages/SignUp';
 import PrivateRoute from './pages/PrivateRoute';
 import { DataLayerContext } from './state/dataLayer';
 import reducer, { initialData } from './state/reducer';
@@ -18,7 +18,7 @@ ReactDOM.render(
             <SignIn />
           </Route>
           <Route path='/signup'>
-            <SingUp />
+            <SignUp />
           </Route>
           <Route path='/home'>
             <PrivateRoute />

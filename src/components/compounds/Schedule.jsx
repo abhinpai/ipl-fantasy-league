@@ -5,13 +5,14 @@ import ScheduleButtonImage from '../../assets/scheduleBtn.svg';
 import getTeamImage from '../../utils/getTeamImage';
 import CoinImage from '../../assets/coin.svg';
 import useFirebase from '../../utils/firebaseUtil';
+import { Collections } from '../../utils/constants';
 
 function Schedule() {
   const [{ isScheduleDivOpen, matches }, dispatch] = useAppData();
   const dbInstance = useFirebase();
 
   useEffect(() => {
-    dbInstance.ref('/matches').on('value', (snapshot) => {
+    dbInstance.ref(Collections.matches).on('value', (snapshot) => {
       actionUpdateMatches(snapshot.val(), dispatch);
     });
   }, []);
