@@ -1,7 +1,13 @@
-import MIImage from '../assets/teams/mi.svg';
-import RCBImage from '../assets/teams/rcb.svg';
-import CSKImage from '../assets/teams/csk.svg';
-import SRHImage from '../assets/teams/srh.svg';
+import {
+  MIImage,
+  RCBImage,
+  CSKImage,
+  SRHImage,
+  KKRImage,
+  DCImage,
+  RRImage,
+  PANJABImage,
+} from '../assets/teams/index.js';
 
 const getTeamImage = (team) => {
   switch (team) {
@@ -13,6 +19,14 @@ const getTeamImage = (team) => {
       return CSKImage;
     case 'SRH':
       return SRHImage;
+    case 'DC':
+      return DCImage;
+    case 'RR':
+      return RRImage;
+    case 'KKR':
+      return KKRImage;
+    case 'PANJAB':
+      return PANJABImage;
   }
 };
 

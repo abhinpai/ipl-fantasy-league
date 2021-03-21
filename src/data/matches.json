@@ -19,21 +19,21 @@
   },
   {
     "matchId": "match3",
-    "team1": "SRH",
-    "team2": "RCB",
+    "team1": "KKR",
+    "team2": "RR",
     "date": "2021-03-21T15:29:25.002Z",
-    "winner": "RCB",
+    "winner": "RR",
     "isDraw": false,
-    "tossWinner": "RCB"
+    "tossWinner": "RR"
   },
   {
     "matchId": "match4",
-    "team1": "CSK",
-    "team2": "MI",
+    "team1": "DC",
+    "team2": "PANJAB",
     "date": "2021-03-21T15:29:25.002Z",
-    "winner": null,
+    "winner": "PANJAB",
     "isDraw": null,
-    "tossWinner": null
+    "tossWinner": "DC"
   },
   {
     "matchId": "match5",
