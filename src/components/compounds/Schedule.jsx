@@ -53,7 +53,6 @@ function Schedule() {
                   />
                   <p>
                     {match.team1}
-                    {console.log(match.tossWinner === match.team1)}
                     {match.tossWinner === match.team1 && (
                       <span>
                         <img src={CoinImage} alt='Toss' />
@@ -66,7 +65,7 @@ function Schedule() {
                 </div>
                 <div className='match__team2'>
                   <p>
-                  {match.tossWinner === match.team2 && (
+                    {match.tossWinner === match.team2 && (
                       <span>
                         <img src={CoinImage} alt='Toss' />
                       </span>

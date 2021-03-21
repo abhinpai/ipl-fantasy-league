@@ -1,0 +1,53 @@
+{
+  "abhin.pai@mail.com": [
+    {
+      "matchId": "match1",
+      "winner": "RCB",
+      "tossWinner": "MI"
+    },
+    {
+      "matchId": "match2",
+      "winner": "CSK",
+      "tossWinner": "SRH"
+    },
+    {
+      "matchId": "match3",
+      "winner": "SRH",
+      "tossWinner": "SRH"
+    }
+  ],
+  "arjun.pai@mail.com": [
+    {
+      "matchId": "match1",
+      "winner": "MI",
+      "tossWinner": "MI"
+    },
+    {
+      "matchId": "match2",
+      "winner": "SRH",
+      "tossWinner": "SRH"
+    },
+    {
+      "matchId": "match3",
+      "winner": "CSK",
+      "tossWinner": "SRH"
+    }
+  ],
+  "twin.thumb@mail.com": [
+    {
+      "matchId": "match1",
+      "winner": "RCB",
+      "tossWinner": "RCB"
+    },
+    {
+      "matchId": "match2",
+      "winner": "SRH",
+      "tossWinner": "SRH"
+    },
+    {
+      "matchId": "match3",
+      "winner": "RCB",
+      "tossWinner": "RCB"
+    }
+  ]
+}

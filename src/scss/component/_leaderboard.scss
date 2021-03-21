@@ -1,5 +1,29 @@
 .leaderboard {
   margin: 2rem;
   min-width: 24rem;
-  @include main-div-background()
+  @include main-div-background();
+
+  &__standings {
+    max-height: 80%;
+    overflow-y: auto;
+    margin: 1rem 2rem;
+
+    & .rank {
+      
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+
+      & img{
+        height: 1rem;
+      }
+
+      & h1 {
+        font-weight: 400;
+        min-width: 180px;
+        font-size: 1.2rem;
+      }
+    }
+  }
 }
