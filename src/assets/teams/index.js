@@ -6,6 +6,7 @@ import KKRImage from './kkr.svg';
 import DCImage from './dc.svg';
 import RRImage from './rr.svg';
 import PANJABImage from './panjab.svg';
+import TrophyImage from '../trophy.svg';
 
 export {
   MIImage,
@@ -16,4 +17,5 @@ export {
   DCImage,
   RRImage,
   PANJABImage,
+  TrophyImage,
 };

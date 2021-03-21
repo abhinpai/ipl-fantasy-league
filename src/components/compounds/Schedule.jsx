@@ -25,6 +25,8 @@ function Schedule() {
     }
   };
 
+  const getDate = (matchDate) => new Date(matchDate).toDateString();
+
   return (
     <section>
       <div
@@ -62,6 +64,7 @@ function Schedule() {
                 </div>
                 <div className='match__status'>
                   <p>{getMatchStatus(match)}</p>
+                  <span>{getDate(match.date)}</span>
                 </div>
                 <div className='match__team2'>
                   <p>

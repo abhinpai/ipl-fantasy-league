@@ -15,17 +15,24 @@
     padding: 14px;
 
     &__status {
-      background: #0000ffb5;
-      padding: 6px 8px;
-      color: #d4d4d4;
-      font-size: 12px;
-      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      & p {
+        color: #d4d4d4;
+        font-size: 12px;
+      }
+      & span {
+        text-align: center;
+        font-size: 8px;
+        margin-top: 1rem;
+      }
     }
 
     &__team1,
     &__team2 {
       display: flex;
-      justify-content: center;
       align-items: center;
       min-width: 154px;
       & img {
@@ -41,6 +48,13 @@
           margin: 0 0.5rem;
         }
       }
+    }
+
+    &__team1 {
+      justify-content: flex-start;
+    }
+    &__team2 {
+      justify-content: flex-end;
     }
   }
 }

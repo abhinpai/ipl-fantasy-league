@@ -34,7 +34,7 @@ function LeaderBoard() {
       <div className='leaderboard__standings'>
         {leaderBoard.length > 0 ? (
           leaderBoard.map((standing, index) => (
-            <div className='rank' key={standing.info.email}>
+            <div className='rank' key={index}>
               <img src={getRankingBadge(index)} alt='Rank' />
               <h1>{standing.info.name}</h1>
               <p>{standing.score}</p>

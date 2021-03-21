@@ -13,10 +13,10 @@ const getLeaderBoard = () => {
     userSubmissions.map((submission, index) => {
       let match = MatchData.find((x) => x.matchId === submission.matchId);
       eventplayed++;
-      if (match.winner === submission.winner) {
+      if (match?.winner === submission.winner) {
         score += PosetiveScore;
       }
-      if (match.tossWinner === submission.tossWinner) {
+      if (match?.tossWinner === submission.tossWinner) {
         score += PosetiveScore;
       }
     });

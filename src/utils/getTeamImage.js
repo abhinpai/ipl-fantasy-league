@@ -7,6 +7,7 @@ import {
   DCImage,
   RRImage,
   PANJABImage,
+  TrophyImage
 } from '../assets/teams/index.js';
 
 const getTeamImage = (team) => {
@@ -25,8 +26,9 @@ const getTeamImage = (team) => {
       return RRImage;
     case 'KKR':
       return KKRImage;
-    case 'PANJAB':
+    case 'PBKS':
       return PANJABImage;
+    default: return TrophyImage;
   }
 };
 
