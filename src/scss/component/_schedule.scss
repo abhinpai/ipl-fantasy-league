@@ -13,8 +13,34 @@
     border: 1px solid #fd00f552;
     border-radius: 10px;
     padding: 14px;
-    & img {
-      height: 4rem;
+
+    &__status {
+      background: #0000ffb5;
+      padding: 6px 8px;
+      color: #d4d4d4;
+      font-size: 12px;
+      border-radius: 12px;
+    }
+
+    &__team1,
+    &__team2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 144px;
+      & img {
+        height: 4rem;
+      }
+      & p {
+        display: flex;
+        align-items: center;
+        margin: 0 8px;
+
+        & span > img {
+          height: 14px;
+          margin: 0 0.5rem;
+        }
+      }
     }
   }
 }

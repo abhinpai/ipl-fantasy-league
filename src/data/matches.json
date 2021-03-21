@@ -1,110 +1,110 @@
 [
   {
-    "id": "match1",
+    "matchId": "match1",
     "team1": "RCB",
     "team2": "MI",
-    "date": "9 April 2021",
-    "day": "Friday",
+    "date": "2021-03-21T15:29:25.002Z",
     "winner": "RCB",
-    "looser": "MI"
+    "isDraw": false,
+    "tossWinner": "RCB"
   },
   {
-    "id": "match1",
+    "matchId": "match1",
     "team1": "CSK",
     "team2": "SRH",
-    "date": "10 April 2021",
-    "day": "Friday",
-    "winner": "MI",
-    "looser": "MI"
+    "date": "2021-03-21T15:29:25.002Z",
+    "winner": null,
+    "isDraw": true,
+    "tossWinner": "SRH"
   },
   {
-    "id": "match1",
+    "matchId": "match1",
     "team1": "SRH",
     "team2": "RCB",
-    "date": "9 April 2021",
-    "day": "Friday",
-    "winner": null,
-    "looser": null
+    "date": "2021-03-21T15:29:25.002Z",
+    "winner": "RCB",
+    "isDraw": false,
+    "tossWinner": "RCB"
   },
   {
-    "id": "match1",
+    "matchId": "match1",
     "team1": "CSK",
     "team2": "MI",
-    "date": "9 April 2021",
-    "day": "Friday",
+    "date": "2021-03-21T15:29:25.002Z",
     "winner": null,
-    "looser": null
+    "isDraw": null,
+    "tossWinner": null
   },
   {
-    "id": "match1",
+    "matchId": "match1",
     "team1": "RCB",
     "team2": "MI",
-    "date": "9 April 2021",
-    "day": "Friday",
-    "winner": "RCB",
-    "looser": "MI"
+    "date": "2021-03-21T15:29:25.002Z",
+    "winner": null,
+    "isDraw": null,
+    "tossWinner": null
   },
   {
-    "id": "match1",
+    "matchId": "match1",
     "team1": "CSK",
     "team2": "SRH",
-    "date": "10 April 2021",
-    "day": "Friday",
-    "winner": "MI",
-    "looser": "MI"
+    "date": "2021-03-21T15:29:25.002Z",
+    "winner": null,
+    "isDraw": null,
+    "tossWinner": null
   },
   {
-    "id": "match1",
+    "matchId": "match1",
     "team1": "SRH",
     "team2": "RCB",
-    "date": "9 April 2021",
-    "day": "Friday",
+    "date": "2021-03-21T15:29:25.002Z",
     "winner": null,
-    "looser": null
+    "isDraw": null,
+    "tossWinner": null
   },
   {
-    "id": "match1",
+    "matchId": "match1",
     "team1": "CSK",
     "team2": "MI",
-    "date": "9 April 2021",
-    "day": "Friday",
+    "date": "2021-03-21T15:29:25.002Z",
     "winner": null,
-    "looser": null
+    "isDraw": null,
+    "tossWinner": null
   },
   {
-    "id": "match1",
+    "matchId": "match1",
     "team1": "RCB",
     "team2": "MI",
-    "date": "9 April 2021",
-    "day": "Friday",
-    "winner": "RCB",
-    "looser": "MI"
+    "date": "2021-03-21T15:29:25.002Z",
+    "winner": null,
+    "isDraw": null,
+    "tossWinner": null
   },
   {
-    "id": "match1",
+    "matchId": "match1",
     "team1": "CSK",
     "team2": "SRH",
-    "date": "10 April 2021",
-    "day": "Friday",
-    "winner": "MI",
-    "looser": "MI"
+    "date": "2021-03-21T15:29:25.002Z",
+    "winner": null,
+    "isDraw": null,
+    "tossWinner": null
   },
   {
-    "id": "match1",
+    "matchId": "match1",
     "team1": "SRH",
     "team2": "RCB",
-    "date": "9 April 2021",
-    "day": "Friday",
+    "date": "2021-03-21T15:29:25.002Z",
     "winner": null,
-    "looser": null
+    "isDraw": null,
+    "tossWinner": null
   },
   {
-    "id": "match1",
+    "matchId": "match1",
     "team1": "CSK",
     "team2": "MI",
-    "date": "9 April 2021",
-    "day": "Friday",
+    "date": "2021-03-21T15:29:25.002Z",
     "winner": null,
-    "looser": null
-  } 
+    "isDraw": null,
+    "tossWinner": null
+  }
 ]

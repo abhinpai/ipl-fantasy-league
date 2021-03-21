@@ -3,12 +3,8 @@ import { actionShowSchedule } from '../../state/action';
 import useAppData from '../../state/dataLayer';
 import ScheduleButtonImage from '../../assets/scheduleBtn.svg';
 import MatchData from '../../data/matches.json';
-import MIImage from '../../assets/teams/mi.svg';
-import RCBImage from '../../assets/teams/rcb.svg';
-import CSKImage from '../../assets/teams/csk.svg';
-import SRHImage from '../../assets/teams/srh.svg';
-
-const TeamImagePath = '../../assets/teams/';
+import getTeamImage from '../../utils/getTeamImage';
+import CoinImage from '../../assets/coin.svg';
 
 function Schedule() {
   const [{ isScheduleDivOpen }, dispatch] = useAppData();
@@ -17,16 +13,15 @@ function Schedule() {
     actionShowSchedule(false, dispatch);
   };
 
-  const getTeamImage = (team) => {
-    switch (team) {
-      case 'MI':
-        return MIImage;
-      case 'RCB':
-        return RCBImage;
-      case 'CSK':
-        return CSKImage;
-      case 'SRH':
-        return SRHImage;
+  const getMatchStatus = (match) => {
+    if (!match.winner && !match.isDraw) {
+      return '-';
+    } else if (match.team1 === match.winner) {
+      return '1 - 0';
+    } else if (match.isDraw) {
+      return 'Draw';
+    } else {
+      return '0 - 1';
     }
   };
 
@@ -50,9 +45,39 @@ function Schedule() {
         <div className='match-schedule'>
           {MatchData.map((match, index) => {
             return (
-              <div className="match">
-                <img src={getTeamImage(match.team1.toUpperCase())} alt={match.team1} />
-                <img src={getTeamImage(match.team2.toUpperCase())} alt={match.team2} />
+              <div className='match' key={index}>
+                <div className='match__team1'>
+                  <img
+                    src={getTeamImage(match.team1.toUpperCase())}
+                    alt={match.team1}
+                  />
+                  <p>
+                    {match.team1}
+                    {console.log(match.tossWinner === match.team1)}
+                    {match.tossWinner === match.team1 && (
+                      <span>
+                        <img src={CoinImage} alt='Toss' />
+                      </span>
+                    )}
+                  </p>
+                </div>
+                <div className='match__status'>
+                  <p>{getMatchStatus(match)}</p>
+                </div>
+                <div className='match__team2'>
+                  <p>
+                  {match.tossWinner === match.team2 && (
+                      <span>
+                        <img src={CoinImage} alt='Toss' />
+                      </span>
+                    )}
+                    {match.team2}
+                  </p>
+                  <img
+                    src={getTeamImage(match.team2.toUpperCase())}
+                    alt={match.team2}
+                  />
+                </div>
               </div>
             );
           })}
