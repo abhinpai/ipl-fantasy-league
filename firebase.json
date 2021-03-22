@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "fantasy-league-51825",
     "public": "build",
     "ignore": [
       "firebase.json",
