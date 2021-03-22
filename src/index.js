@@ -29,7 +29,10 @@ ReactDOM.render(
           </Route>
         </Switch>
       </Router>
-      <Notification/>
+      <Notification />
+      <div className='not-support'>
+        <p>Sorry, This webapp does'nt support on any small screen device</p>
+      </div>
     </DataLayerContext>
   </React.StrictMode>,
   document.getElementById('root')
