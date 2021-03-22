@@ -2,19 +2,20 @@ import React, { useEffect } from 'react';
 import { actionShowSchedule, actionUpdateMatches } from '../../state/action';
 import useAppData from '../../state/dataLayer';
 import ScheduleButtonImage from '../../assets/scheduleBtn.svg';
-import getTeamImage from '../../utils/getTeamImage';
-import CoinImage from '../../assets/coin.svg';
 import useFirebase from '../../utils/firebaseUtil';
 import { Collections } from '../../utils/constants';
+import TeamCard from '../molecules/TeamCard';
 
 function Schedule() {
   const [{ isScheduleDivOpen, matches }, dispatch] = useAppData();
   const dbInstance = useFirebase();
 
   useEffect(() => {
-    dbInstance.ref(Collections.matches).on('value', (snapshot) => {
-      actionUpdateMatches(snapshot.val(), dispatch);
-    });
+    if (matches.length === 0) {
+      dbInstance.ref(Collections.matches).on('value', (snapshot) => {
+        actionUpdateMatches(snapshot.val(), dispatch);
+      });
+    }
   }, []);
 
   const closeDiv = () => {
@@ -22,11 +23,11 @@ function Schedule() {
   };
 
   const getMatchStatus = (match) => {
-    if (match.winner === "null" && match.isDraw === "null") {
+    if (match.winner === 'null' && match.isDraw === 'null') {
       return '-';
     } else if (match.team1 === match.winner) {
       return '1 - 0';
-    } else if (match.isDraw && match.isDraw !== "null") {
+    } else if (match.isDraw && match.isDraw !== 'null') {
       return 'Draw';
     } else {
       return '0 - 1';
@@ -57,38 +58,20 @@ function Schedule() {
             matches.map((match, index) => {
               return (
                 <div className='match' key={index}>
-                  <div className='match__team1'>
-                    <img
-                      src={getTeamImage(match.team1.toUpperCase())}
-                      alt={match.team1}
-                    />
-                    <p>
-                      {match.team1}
-                      {match.tossWinner === match.team1 && (
-                        <span>
-                          <img src={CoinImage} alt='Toss' />
-                        </span>
-                      )}
-                    </p>
-                  </div>
+                  <TeamCard
+                    direction={'left'}
+                    teamName={match.team1}
+                    tossWinner={match.tossWinner}
+                  />
                   <div className='match__status'>
                     <p>{getMatchStatus(match)}</p>
                     <span>{getDate(match.date)}</span>
                   </div>
-                  <div className='match__team2'>
-                    <p>
-                      {match.tossWinner === match.team2 && (
-                        <span>
-                          <img src={CoinImage} alt='Toss' />
-                        </span>
-                      )}
-                      {match.team2}
-                    </p>
-                    <img
-                      src={getTeamImage(match.team2.toUpperCase())}
-                      alt={match.team2}
-                    />
-                  </div>
+                  <TeamCard
+                    direction={'right'}
+                    teamName={match.team2}
+                    tossWinner={match.tossWinner}
+                  />
                 </div>
               );
             })
@@ -107,4 +90,4 @@ function Schedule() {
   );
 }
 
-export default Schedule;
+export default React.memo(Schedule);
