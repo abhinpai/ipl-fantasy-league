@@ -59,6 +59,21 @@
   }
 }
 
+.match-schedule::-webkit-scrollbar-track {
+  @include scrollbar-track();
+}
+
+.match-schedule::-webkit-scrollbar-thumb {
+  @include scrollbar-thumb();
+  :hover {
+    @include scrollbar-thumb-hover();
+  }
+}
+
+.match-schedule::-webkit-scrollbar {
+  @include scrollbar();
+}
+
 .match-schedule--inactive {
   @include schedule-section();
   display: none;

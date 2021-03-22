@@ -85,3 +85,20 @@
   transform: scale(1.1);
   transition: transform 200ms ease-in-out;
 }
+
+// Custom ScrollBar
+@mixin scrollbar-thumb {
+  background-color: #f213cc;
+}
+
+@mixin scrollbar-thumb-hover {
+  background-color: #b00ecd;
+}
+
+@mixin scrollbar-track {
+  background-color: #041cf4;
+}
+
+@mixin scrollbar {
+  width: 4px;
+}
