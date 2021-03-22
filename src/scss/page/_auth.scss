@@ -47,7 +47,7 @@
         cursor: pointer;
 
         &:hover {
-          @include button-effect();
+          @include button-scale-effect();
         }
       }
     }

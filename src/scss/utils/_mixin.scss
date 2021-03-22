@@ -24,6 +24,60 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#121212",endColorstr="#921cf8",GradientType=1);
 }
 
+@mixin secondary-gradient-background {
+  background: rgb(18, 18, 18);
+  background: -moz-linear-gradient(
+    36deg,
+    #000002 0%,
+    #163fd861 32%,
+    #6912b463 69%,
+    #921cf873 100%
+  );
+  background: -webkit-linear-gradient(
+    36deg,
+    #000002 0%,
+    #163fd861 32%,
+    #6912b463 69%,
+    #921cf873 100%
+  );
+  background: linear-gradient(
+    36deg,
+    #000002 0%,
+    #163fd861 32%,
+    #6912b463 69%,
+    #921cf873 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#121212",endColorstr="#921cf8",GradientType=1);
+}
+
+@mixin tertiory-gradient-background {
+  background: rgb(18, 18, 18);
+  background: -moz-linear-gradient(
+    36deg,
+    #921cf873 0%,
+    #163fd861 32%,
+    #6912b463 69%,
+    #921cf873 100%
+  );
+  background: -webkit-linear-gradient(
+    36deg,
+    #921cf873 0%,
+    #163fd861 32%,
+    #6912b463 69%,
+    #921cf873 100%
+  );
+  background: linear-gradient(
+    36deg,
+    #921cf873 0%,
+    #163fd861 32%,
+    #6912b463 69%,
+    #921cf873 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#121212",endColorstr="#921cf8",GradientType=1);
+}
+
+
+
 @mixin schedule-drawer {
   @include primary-gradient-background();
   position: absolute;
@@ -81,9 +135,33 @@
   border-radius: 10px;
 }
 
-@mixin button-effect {
-  transform: scale(1.1);
-  transition: transform 200ms ease-in-out;
+// Animations
+
+@mixin button-scale-effect($scale: 1.1, $duration: 200ms) {
+  transform: scale($scale);
+  transition: transform $duration ease-in-out;
+}
+
+@mixin button-scale-down-effect($scale: 1, $duration: 200ms) {
+  transform: scale($scale);
+  transition: transform $duration ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(203, 0, 240, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(240, 171, 0, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(240, 171, 0, 0);
+  }
 }
 
 // Custom ScrollBar
