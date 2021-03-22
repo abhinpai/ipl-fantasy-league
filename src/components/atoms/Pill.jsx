@@ -1,8 +1,10 @@
 import React from 'react';
 
-function Pill({ name }) {
+function Pill({ name, onClick }) {
+
+  
   return (
-    <div className='pill shine-wrap '>
+    <div className='pill shine-wrap' onClick={onClick}>
       <span>{name}</span>
     </div>
   );
