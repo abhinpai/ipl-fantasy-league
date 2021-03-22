@@ -1,0 +1,62 @@
+.pill {
+  padding: 0.3rem 0.8rem;
+  border-radius: 1rem;
+  background: #d906da7d;
+  background-image: linear-gradient(
+    43deg,
+    #3a0eda8e 0%,
+    #f50fe65d 46%,
+    #5100ef69 100%
+  );
+  //   box-shadow: 1px 1px 2px black, 0 0 25px rgba(0, 0, 255, 0.288),
+  //     0 0 5px rgba(0, 0, 139, 0.432);
+
+  margin-left: 1rem;
+  border-radius: 2rem;
+  cursor: pointer;
+
+  &:hover {
+    @include button-scale-effect(1.1, 500ms);
+  }
+
+  :not(:hover) {
+    @include button-scale-down-effect(1, 1000ms);
+  }
+
+  & span {
+    user-select: none;
+    font-size: 12px;
+  }
+}
+
+.shine-wrap {
+  position: relative;
+  overflow: hidden;
+  &::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    bottom: -50%;
+    left: -50%;
+    background: linear-gradient(
+      to bottom,
+      rgba(229, 172, 142, 0),
+      rgba(255, 255, 255, 0.5) 50%,
+      rgba(229, 172, 142, 0)
+    );
+    transform: rotateZ(60deg) translate(-5em, 7.5em);
+  }
+  &:hover {
+    overflow: hidden;
+    &::after {
+      animation: button-shine 4s forwards;
+    }
+  }
+}
+
+@keyframes button-shine {
+  100% {
+    transform: rotateZ(60deg) translate(1em, -9em);
+  }
+}

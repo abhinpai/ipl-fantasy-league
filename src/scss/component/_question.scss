@@ -1,5 +1,108 @@
-.question {
+.question-section {
   @include main-div-background();
   min-width: calc(100vw - 33rem);
   margin: 2rem 1rem 2rem;
+  position: relative;
+
+  &__div {
+    max-height: 80%;
+    overflow-y: auto;
+
+    & .match-div {
+      margin: 1.6rem;
+
+      &__matches {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-around;
+
+        &__vs {
+          background-color: blue;
+          padding: 1rem;
+          border-radius: 50%;
+          font-size: 20px;
+          animation: pulse 2s infinite;
+        }
+
+        & .match__team1,
+        & .match__team2 {
+          display: flex;
+          align-items: center;
+          min-width: 154px;
+          justify-content: center;
+          & img {
+            height: 6rem;
+          }
+        }
+      }
+
+      & .question-div {
+        margin-top: 1rem;
+
+        & .question-one,
+        .question-two {
+          padding: 1rem;
+          border-radius: 1rem;
+          margin-bottom: 1.6rem;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          @include secondary-gradient-background();
+
+          & .pill-div {
+            min-width: 160px;
+            min-height: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+          }
+
+          & p {
+            font-size: 1.2rem;
+            font-weight: 200;
+            padding-bottom: 2px;
+          }
+        }
+
+        & .question-two {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+
+  .submission-footer {
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    @include tertiory-gradient-background();
+
+    & span {
+      user-select: none;
+      cursor: pointer;
+    }
+  }
+}
+
+.question-section {
+  div::-webkit-scrollbar-track {
+    @include scrollbar-track();
+  }
+
+  div::-webkit-scrollbar-thumb {
+    @include scrollbar-thumb();
+    :hover {
+      @include scrollbar-thumb-hover();
+    }
+  }
+
+  div::-webkit-scrollbar {
+    @include scrollbar();
+  }
 }
