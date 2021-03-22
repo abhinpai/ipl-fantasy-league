@@ -8,6 +8,7 @@
     & h3 {
       font-weight: 500;
       font-size: 16px;
+      margin-bottom: 0.5rem;
     }
     & p {
       font-size: 12px;
@@ -19,6 +20,7 @@
 .Toastify__toast {
   border-radius: 4px !important;
   padding: 1rem 1.4rem !important;
+  padding-left: 0.6rem !important;
 }
 
 .Toastify__toast-body {
@@ -26,5 +28,9 @@
 }
 
 .Toastify__toast--success {
-  background-color: #00875a !important;
+  background-color: #16503d !important;
+}
+
+.Toastify__toast--error {
+  background-color: #4c120c !important;
 }
