@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import PlayersImage from '../assets/players.svg';
 import ArrowIcon from '../assets/icons/arrow-right.svg';
 import { Link, useHistory } from 'react-router-dom';
-import useFirebase from '../utils/firebaseUtil';
+import useFirebase, { generateFirebaseUserId } from '../utils/firebaseUtil';
 import { Collections, EmailRegx } from '../utils/constants';
-import { generateFirebaseUserId } from '../utils/helpers';
 import { errorToast, successToast } from '../components/molecules/Notification';
 
 const defaultUserState = {

@@ -1,5 +1,4 @@
 import firebase from 'firebase';
-import { generateFirebaseUserId } from './helpers';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyD8IEP25_rnqUHGaZ8cdpGnAi9CguDxmSM',
@@ -21,11 +20,18 @@ const useFirebase = () => {
     firebaseDB = firebase.database();
   }
 
+  // const db = firebase.database();
+  
   return firebaseDB;
 };
 
-export default useFirebase;
+export const generateFirebaseUserId = (emailId) =>
+  emailId.replaceAll('.', '_').replace('@', '-');
 
+export const reGHenerateFirebaseUserId = (emailId) =>
+  emailId.replaceAll('_', '.').replace('-', '@');
+
+export default useFirebase;
 
 // -----------------------------
 // Trouble Shooting Methods

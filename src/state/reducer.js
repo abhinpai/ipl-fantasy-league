@@ -1,16 +1,19 @@
+import { localStorageKeys } from '../utils/constants';
 import { actions } from './action';
 
 export const initialData = {
-  isLoggedIn: false,
   isScheduleDivOpen: false,
   matches: [],
   leaderboard: [],
+  loggedsUser: localStorage.getItem(localStorageKeys.user)
+    ? JSON.parse(localStorage.getItem(localStorageKeys.user))
+    : {},
 };
 
 const reducer = (state, action) => {
   switch (action.type) {
     case actions.userLogin:
-      return { ...state, isLoggedIn: action.payload };
+      return { ...state, loggedsUser: action.payload };
     case actions.showSchedule:
       return { ...state, isScheduleDivOpen: action.payload };
     case actions.matches:

@@ -4,8 +4,8 @@ export const actions = {
   matches: 'MATCHES',
 };
 
-export const actionUserLogin = (isLoggedIn, dispatch) =>
-  dispatch({ type: actions.userLogin, payload: isLoggedIn });
+export const actionUserLogin = (userInfo, dispatch) =>
+  dispatch({ type: actions.userLogin, payload: userInfo });
 
 export const actionShowSchedule = (isScheduleDivOpen, dispatch) =>
   dispatch({ type: actions.showSchedule, payload: isScheduleDivOpen });
